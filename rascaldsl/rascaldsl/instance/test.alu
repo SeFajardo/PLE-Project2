@@ -1,0 +1,19 @@
+# Programa de prueba básico
+x = 5
+y = 10
+z = x + y
+
+# Expresiones aritméticas
+suma = 5 + 3
+resta = 10 - 2
+mult = 4 * 7
+division = 20 / 4
+potencia = 2 ** 8
+
+# Función simple
+suma_func = function(a, b) do
+    resultado = a + b
+end suma_func
+
+# If expression más simple
+resultado = if 5 < 10 then 1 else 0 end
