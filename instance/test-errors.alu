@@ -1,0 +1,47 @@
+# Test de errores - Este archivo debe generar errores de tipo
+
+# ========================================
+# ERROR 1: Identificador no existe en estructura
+# ========================================
+# El campo 'z' no existe en la definición del struct
+BadPoint = data with x, y, z
+    rep = struct(x : Int, y : Int)
+end BadPoint
+
+# ========================================
+# ERROR 2: Tipo incorrecto en asignación
+# ========================================
+# Se declara como Int pero se asigna un String
+numero_mal : Int = "esto es texto"
+
+# ========================================
+# ERROR 3: Tipos incompatibles en operación
+# ========================================
+# No se puede sumar Int con String
+resultado_mal : Int = 5 + "texto"
+
+# ========================================
+# ERROR 4: Condición no booleana
+# ========================================
+# La condición del if debe ser Bool
+decision_mal : Int = if 5 then 10 else 20 end
+
+# ========================================
+# ERROR 5: Tipo de retorno incorrecto
+# ========================================
+funcion_mal = function(x : Int) : Int do
+    resultado : Int = "no es entero"
+end funcion_mal
+
+# ========================================
+# ERROR 6: Operación con tipos incompatibles
+# ========================================
+# El operador 'and' requiere Bool en ambos lados
+logica_mal : Bool = 5 and 10
+
+# ========================================
+# ERROR 7: Nombre de cierre incorrecto
+# ========================================
+funcion_cierre_mal = function(x : Int) : Int do
+    res : Int = x * 2
+end nombre_equivocado
